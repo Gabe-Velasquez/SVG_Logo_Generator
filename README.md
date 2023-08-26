@@ -18,7 +18,7 @@
 
   ## Usage <a name='usage'></a>
   The application will ask the user a series of questions from what colors are used, characters  to be shown and what shapes will be used as their logo. Quick demonstration attached below. <br>
-  ![Alt text](https://drive.google.com/file/d/1aujc1NHiK0juq15MVXnZmzqZIzee_eKa/view)
+  [![Watch the video](https://drive.google.com/file/d/1aujc1NHiK0juq15MVXnZmzqZIzee_eKa/view)]
 
   ## Licenses <a name='license'></a>
   
