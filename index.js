@@ -18,7 +18,7 @@ const questions = [
         name: 'letters',
         type: 'input',
         message: 'Please enter three characters for your logo.',
-        validate: validInput
+        validate: validLength
     },
     {
         name: 'shape',
