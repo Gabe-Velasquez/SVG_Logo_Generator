@@ -2,12 +2,13 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const genSVG = require('./lib/shapes');
-//shape generator goes down below
 
+//function to make sure user does not add more than 3 characters for their logo
 function validLength(input){
-    return (input.length != 3)? console.log('Keep your letters between 1 and 3 characters.'): true
+    return (input.length != 3)? console.log(' Keep your letters between 1 and 3 characters.'): true
 }
 
+//function created to make sure user does not put in an empty entry 
 function validInput(input){
     return (input='')?console.log('Please enter a valid character'): true
 }
@@ -18,19 +19,19 @@ const questions = [
         name: 'letters',
         type: 'input',
         message: 'Please enter three characters for your logo.',
-        validate: validLength
+        validate: validLength //function above used here to prevent more than 3 characters from being added 
     },
     {
         name: 'shape',
         type: 'list',
         message: 'Which shape would you like to choose for your logo?',
-        choices: ['Square', 'Circle', 'Triangle']
+        choices: ['Square', 'Circle', 'Triangle'] //list of available shapes for user to choose
     },
     {
         name:'font',
         type:'input',
         message: 'What color would you like your letters to be? If you\'re using hex colors please include #',
-        validate: validInput
+        validate: validInput //function to prevent empty entries
     },
     {
         name: 'color',
@@ -58,4 +59,5 @@ function buildSVG(file_name, data){
     })
 }
 
+//starts application 
 pass()
