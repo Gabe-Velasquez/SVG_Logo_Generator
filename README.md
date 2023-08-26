@@ -18,7 +18,7 @@
 
   ## Usage <a name='usage'></a>
   The application will ask the user a series of questions from what colors are used, characters  to be shown and what shapes will be used as their logo. Quick demonstration attached below. <br>
-  ![Alt text](Logo_Generator_Demo.webm)
+  ![Alt text](./Logo_Generator_Demo.webm)
 
   ## Licenses <a name='license'></a>
   
