@@ -1,6 +1,7 @@
 //required modules
 const fs = require('fs');
 const inquirer = require('inquirer');
+const genSVG = require('./lib/shapes');
 //shape generator goes down below
 
 function validLength(input){
@@ -38,7 +39,23 @@ const questions = [
         validate: validInput
     }
 ];
-//passing questions through inquirer to have it generate everything when everything is collected
-function build(){
 
+//Passing questions into inquirer for build
+function pass(){
+    inquirer.prompt(questions).then(data=>{
+        buildSVG(`${data.shape}Logo.svg`,genSVG(data))
+    })
 }
+
+//Building svg with write file if errors in build are false. if true, console logs the error
+function buildSVG(file_name, data){
+    fs.writeFile(`./${file_name}`,data,(err)=>{
+        if (err){
+            console.log(err)
+        }else{
+            console.log('Successfully created your logo!')
+        }
+    })
+}
+
+pass()
