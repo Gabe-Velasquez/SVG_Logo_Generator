@@ -28,13 +28,13 @@ const questions = [
     {
         name:'font',
         type:'input',
-        message: 'What color would you like your letters to be?',
+        message: 'What color would you like your letters to be? If you\'re using hex colors please include #',
         validate: validInput
     },
     {
         name: 'color',
         type: 'input',
-        message: 'What color would you like your shape to be?',
+        message: 'What color would you like your shape to be? If you\'re using hex colors please include #',
         validate: validInput
     }
 ];
